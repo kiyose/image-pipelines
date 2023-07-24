@@ -31,7 +31,7 @@ jobs:
 
       - name: Build an image from Dockerfile
         run: |
-          docker build -t trivy-pipeline ./alpine/3.11/
+          docker build -t trivy-pipeline ./baseimages/alpine/3.11/
 
       - name: Run Trivy vulnerability scanner
         uses: aquasecurity/trivy-action@master
