@@ -27,9 +27,32 @@ jobs:
     strategy:
       matrix:
         version: 
+          - almalinux:9
+          - almalinux:9-minimal
           - alpine:3.11
+          - alpine:3.11.3
+          - alpine:3.12.1
+          - alpine:3.13
+          - alpine:3.14.0
           - alpine:3.15
+          - alpine:3.16
+          - alpine:3.17
+          - alpine:3.18
+          - amazonlinux:2
+          - confluentinc/cp-kafka-connect:7.0.1
+          - coretech/debian-prometheus:1.0
           - debian:11
+          - debian:11-slim
+          - debian:buster-slim
+          - golang:1.15.15-buster
+          - openjdk:8u322-jre
+          - openresty/openresty:1.15.8.2-alpine-fat
+          - openresty/openresty:1.19.9.1-7-alpine-aarch64
+          - operator-framework/helm-operator:1.28.0
+          - platform/debian-base:8.8-1
+          - python:3.6.5-alpine
+          - quay.io/operator-framework/ansible-operator:v1.25.0
+          - quay.io/strimzi/kafka:0.32.0-kafka-3.3.1
       fail-fast: false
     steps:
       - name: Checkout code
