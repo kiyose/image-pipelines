@@ -35,13 +35,13 @@ jobs:
     strategy:
       matrix:
         version: 
-          - alpine/3.11/
-          - alpine/3.15/
-          - debian/11/
+          - alpine:3.11
+          - alpine:3.15
+          - debian:11
     steps:
       - name: Build an image from Dockerfile
         run: |
-          docker build -t ${{matrix.version}} ./baseimages/${{matrix.version}}
+          DIR=$(echo ${{matrix.version}} | sed -e 's,:,/,') && docker build -t ${{matrix.version}} ./baseimages/$DIR/
       - name: Run Trivy vulnerability scanner
         uses: aquasecurity/trivy-action@master
         with:
