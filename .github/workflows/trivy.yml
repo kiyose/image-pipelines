@@ -48,6 +48,6 @@ jobs:
           image-ref: ${{matrix.version}}
           format: 'table'
           exit-code: '1'
-          ignore-unfixed: true
+          ignore-unfixed: false
           vuln-type: 'os,library'
-          severity: 'CRITICAL,HIGH'
+          severity: 'CRITICAL,HIGH,MEDIUM,LOW'
