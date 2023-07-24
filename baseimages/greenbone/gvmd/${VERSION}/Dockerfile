@@ -1,0 +1,1 @@
+FROM greenbone/gvmd:${VERSION}
