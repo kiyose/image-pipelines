@@ -4,7 +4,6 @@
 # documentation.
 
 name: trivy
-i
 on:
   push:
     branches: [ "main" ]
